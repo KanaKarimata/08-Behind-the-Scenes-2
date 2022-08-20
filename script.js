@@ -107,46 +107,61 @@
 
 // var firstName = 'Matilda';
 
-const jonas = {
-  firstName: 'Jonas',
-  year: 1991,
-  calcAge: function() {
-    // console.log(this);
-    console.log(2037 -this.year);
+// const jonas = {
+//   firstName: 'Jonas',
+//   year: 1991,
+//   calcAge: function() {
+//     // console.log(this);
+//     console.log(2037 -this.year);
     
-    //solution1
-    // const self = this;
-    // const isMillenial = function () {
-    //   console.log(self.year >= 1981 && self.year <= 1996);
-    // }
+//     //solution1
+//     // const self = this;
+//     // const isMillenial = function () {
+//     //   console.log(self.year >= 1981 && self.year <= 1996);
+//     // }
     
-    //solution2
-    const isMillenial = () => {
-      console.log(this.year >= 1981 && this.year <= 1996);
-    };
-    isMillenial();
-  },
+//     //solution2
+//     const isMillenial = () => {
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//     };
+//     isMillenial();
+//   },
 
-  greet: () => {
-    console.log(`Hey ${this.firstName}`)
-  },
+//   greet: () => {
+//     console.log(`Hey ${this.firstName}`)
+//   },
+// };
+
+// jonas.greet();
+// console.log(this.firstName);
+// jonas.calcAge();
+
+// //Argument keyword
+// const addExpr = function (a, b) {
+//   console.log(arguments)
+//   return a + b;
+// }
+// addExpr(2, 5);
+// addExpr(2, 5, 8, 12);
+
+// var addArrow = (a, b) => {
+//   console.log(arguments);
+//   return a + b;
+// };
+
+// addArrow(2,5,8);
+
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Jonas',
+  age: 30,
 };
-
-jonas.greet();
-console.log(this.firstName);
-jonas.calcAge();
-
-//Argument keyword
-const addExpr = function (a, b) {
-  console.log(arguments)
-  return a + b;
-}
-addExpr(2, 5);
-addExpr(2, 5, 8, 12);
-
-var addArrow = (a, b) => {
-  console.log(arguments);
-  return a + b;
-};
-
-addArrow(2,5,8);
+const friend = me;
+friend.age = 27;
+console.log('Friend', friend);
+console.log('Me', me);
